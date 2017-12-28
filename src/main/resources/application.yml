@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: cloud-goods
+  cloud:
+    config:
+      env: dev
+      label: master
+      discovery:
+        enabled: true
+        serviceId: cloud-configserver
 eureka:
   client:
     serviceUrl:
