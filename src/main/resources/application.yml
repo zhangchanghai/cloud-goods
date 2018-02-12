@@ -1,8 +1,6 @@
 server:
   port: 7801
 spring:
-  application:
-    name: cloud-goods
   cloud:
     config:
       env: dev
@@ -13,7 +11,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:123456@localhost:8761/eureka/
+      defaultZone: http://admin:123456@peer1:8761/eureka/
 feign:
   hystrix:
     enabled: true
