@@ -11,4 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface UserFeign {
 	@RequestMapping(value = "/getuser/{id}",method=RequestMethod.GET)
 	public Map<String,Object> getUser(@PathVariable("id") Integer id);
+	
+	@RequestMapping(value = "/getuser/{id}",method=RequestMethod.POST)
+	public Map<String,Object> getUser2(@PathVariable("id") Integer id,Map<String,Object> map);
 }

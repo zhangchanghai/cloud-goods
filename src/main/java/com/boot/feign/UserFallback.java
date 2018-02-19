@@ -15,4 +15,12 @@ public class UserFallback implements UserFeign{
 		return map;
 	}
 
+	@Override
+	public Map<String, Object> getUser2(Integer id, Map<String, Object> map2) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("success", false);
+		map.put("msg", "无法连接user微服务");
+		return map;
+	}
+
 }

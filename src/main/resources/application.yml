@@ -1,5 +1,5 @@
 server:
-  port: 7801
+  port: 7800
 spring:
   cloud:
     config:
@@ -8,6 +8,11 @@ spring:
       discovery:
         enabled: true
         serviceId: cloud-configserver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 123456
 eureka:
   client:
     serviceUrl:
